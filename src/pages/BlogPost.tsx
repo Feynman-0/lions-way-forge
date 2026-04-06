@@ -35,7 +35,7 @@ const BlogPost = () => {
           </ul>
         );
       }
-      if (block.startsWith(""") || block.startsWith('"') || block.startsWith("—")) {
+      if (block.startsWith("\u201C") || block.startsWith('"') || block.startsWith("\u2014")) {
         return <blockquote key={i} className="font-serif text-lg text-primary/90 italic border-l-2 border-primary/30 pl-6 my-6">{block}</blockquote>;
       }
       return <p key={i} className="font-sans text-base text-foreground/80 leading-relaxed mb-4">{block}</p>;
